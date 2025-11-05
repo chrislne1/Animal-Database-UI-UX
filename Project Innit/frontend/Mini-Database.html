@@ -1,0 +1,82 @@
+<html>
+    <!-- Link the css and js file to the html -->
+    <link rel = "stylesheet" href = "style.css">
+    <script src = "project.js" defer></script>
+
+    <body onload = "loadGame()">
+        <header>
+            <!-- Headers for the game titlepage -->
+            <h1 id = "title">Animal Database</h1>
+            <h2 id = "prompt">Please Enter Your Name:</h2>
+        
+            <!-- Textbox for the user to input their name -->
+            <label for = "name"></label>
+            <input type = "text" id = "name" name ="name"><br><br>
+            
+            <form id = "myform">
+                <!-- Button for user to clear the text -->
+                <input type="reset" value="Clear" class="button" onclick="clearText()">
+
+                <!-- Button for user to submit their name -->
+                <input type = "submit" value = "Submit" class = "button">
+            </form>        
+        </header>
+    </body>
+
+    <!-- Page that displays the gameplay -->
+    <div id = "startGame">
+        <!-- List of animals within the database -->
+        <div>
+            <h3>List of Animals:</h3>
+            <ul>
+                <li>Elephant</li>
+                <li>Bird</li>
+                <li>Snake</li>
+                <li>Lion</li>
+                <li>Dog</li>
+                <li>Cat</li>
+                <li>Cheetah</li>
+                <li>Panther</li>
+                <li>Monkey</li>
+                <li>Gorilla</li>
+            </ul>
+        </div>
+
+        <header>
+            <!-- Description of the randomly generated animal and output it -->
+            <h3><b>Animal Description</b></h3>
+            <p id = "description">idk styl</p>
+
+            <!-- Prompt user to input their guess -->
+            <h3 id = "promptUser">Enter In An Animals Name</h2>
+            <input type = "text" id = "animalName">
+            <button onclick = "submitAnimal()">Submit Answer</button>
+        </header>
+    </div>
+
+    <!-- Result screen that tells the user the answer and if they were right or wrong -->
+    <div id = "resultScreen">
+       <!-- Image of the animal described -->
+        <figure>
+            <img id = "image" src = "images/animal2.jpg" alt = "Error innit" width = "1000px" height = "500px">
+        </figure>
+
+        <!-- Name of the animal and if the user was correct -->
+        <p id = "result"></p>
+
+        <!-- Button to continue to next screen -->
+        <button onclick = "continueOrQuit()">Continue</button>
+    </div>
+
+    <!-- Screen shown when the game is over -->
+    <div id = "gameOver">
+        <header>
+            <!-- Header and tell user how many questions they answered correct -->
+            <h2>Game Over!</h2>
+            <p id = "finalScore">Congratulations, your final score was </p>
+
+            <!-- Button for user to try again -->
+            <button onclick = "loadGame()">Try Again</button>
+        </header>
+    </div>
+</html>
